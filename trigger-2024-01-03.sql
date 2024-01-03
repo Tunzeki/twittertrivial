@@ -97,3 +97,8 @@ BEGIN
 END $$
 
 DELIMITER ;
+
+-- Insert values to confirm that it works
+INSERT INTO companies (name, country_code) VALUES ("KoKo Butter", "NG");
+INSERT INTO companies (name, country_code) VALUES ("Netflix", "USA");
+INSERT INTO companies (name, country_code) VALUES ("Mr Macaroni Entertainment", "NG");
