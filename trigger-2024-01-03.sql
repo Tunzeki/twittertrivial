@@ -18,3 +18,14 @@
 
 -- First, create a database
 CREATE DATABASE IF NOT EXISTS twitter_trivial_db;
+
+-- Use the database subsequently
+USE twitter_trivial_db;
+
+-- Create a table to store companies details
+-- From the sample code, he provided, I could make out that companies will have at least 3 columns
+CREATE TABLE IF NOT EXISTS companies (
+    id VARCHAR(12) PRIMARY KEY, -- assuming a country initials may be 2 or 3 lettters gives a max of 12 characters
+    `name` VARCHAR(128) UNIQUE NOT NULL,
+    country_code VARCHAR(3) NOT NULL -- assume a max of 3 letters
+)ENGINE=InnoDB, CHARSET="utf8mb4";
